@@ -1,0 +1,95 @@
+{
+  "_readme": "Edit this file to update fares, schedules, stops, contacts and offices — the website reads it live, no code changes needed. Prices are in Kenyan Shillings (KES). See _dataNotes for two conflicts found between the two fare flyers supplied — worth double-checking before this goes live.",
+
+  "_dataNotes": [
+    "Two source flyers gave different fares for the same three legs: Nairobi-Isiolo (KES 1,000 vs 1,500), Nairobi-Marsabit (KES 2,000 vs 3,000), Nairobi-Moyale (KES 2,500 vs 3,500). This file uses the newer 'AGREED AND APPROVED FARES' flyer's numbers (the higher ones) since it was explicitly presented as the current, partner-agreed structure. Confirm this is the right call - if the original flyer's prices are still correct, edit the relevant 'fare' values below.",
+    "Two different TikTok handles appeared across the flyers: @abyssinialuxurycoach and @abyssinia.luxury010. This file uses the former - update company.socials.tiktok if that's wrong.",
+    "The flyer promotes https://abyssinialuxurycoaches.com/ - different from the abyssinialuxurycoach.co.ke domain given at the start of this project. company.website below still points to .co.ke; change it if .com is now the real one."
+  ],
+
+  "company": {
+    "name": "Abyssinia Luxury Coach",
+    "tagline": "City To Cradle",
+    "slogan": "Travel in Style, Arrive in Comfort.",
+    "operator": "Buscar E.A Sacco",
+    "website": "https://abyssinialuxurycoach.co.ke",
+    "whatsapp": "254757869102",
+    "whatsappDisplay": "+254 757 869 102",
+    "callPhone": "254752606760",
+    "callPhoneDisplay": "0752 606 760",
+    "email": "bookings@abyssinialuxurycoach.co.ke",
+    "offices": [
+      {
+        "city": "Nairobi",
+        "address": "9th Street, Eastleigh, Nairobi, Kenya",
+        "hours": "Evening corridor coach departs daily 7:00 PM - Marsabit day service departs daily 7:00 AM"
+      },
+      {
+        "city": "Addis Ababa",
+        "label": "PLACEHOLDER - confirm exact terminal address",
+        "address": "Abyssinia Luxury Coach Terminal, Addis Ababa, Ethiopia",
+        "hours": "Daily - confirm exact hours"
+      }
+    ],
+    "socials": {
+      "facebook": "",
+      "instagram": "",
+      "tiktok": "@abyssinialuxurycoach"
+    }
+  },
+
+  "vehicle": {
+    "layout": "2-2",
+    "rows": 11,
+    "lastRowSeats": 5,
+    "perks": [
+      "Spacious reclining seats",
+      "Air conditioning",
+      "Free WiFi",
+      "USB charging ports",
+      "Generous luggage space",
+      "Safe & secure travel"
+    ]
+  },
+
+  "services": [
+    {
+      "id": "evening-corridor",
+      "name": "Evening corridor coach",
+      "description": "Nairobi to Moyale corridor, continuing through to Hawassa and Addis Ababa for through-passengers",
+      "departures": { "Nairobi": "19:00", "Moyale": "14:00" },
+      "note": "Nairobi departures board at 9th Street, Eastleigh. Through-passengers for Hawassa and Addis Ababa continue past Moyale on the same coach."
+    },
+    {
+      "id": "morning-marsabit",
+      "name": "Morning Marsabit day service",
+      "description": "A separate day service between Nairobi and Marsabit only",
+      "departures": { "Nairobi": "07:00", "Marsabit": "06:30" },
+      "note": "Runs daily, separate from the evening corridor coach."
+    }
+  ],
+
+  "corridorOrder": ["Nairobi", "Isiolo", "Archers Post", "Serolipi", "Merille", "Laisamis", "Logologo", "Marsabit", "Bubisa", "Turbi", "Walda", "Sololo", "Moyale", "Hawassa", "Addis Ababa"],
+
+  "routes": [
+    { "id": "nbo-isiolo", "from": "Nairobi", "to": "Isiolo", "fare": 1500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-archers", "from": "Nairobi", "to": "Archers Post", "fare": 1500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-serolipi", "from": "Nairobi", "to": "Serolipi", "fare": 2500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-merille", "from": "Nairobi", "to": "Merille", "fare": 2500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-laisamis", "from": "Nairobi", "to": "Laisamis", "fare": 2500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-logologo", "from": "Nairobi", "to": "Logologo", "fare": 3000, "serviceId": "morning-marsabit", "source": "Agreed & approved fares" },
+    { "id": "nbo-marsabit", "from": "Nairobi", "to": "Marsabit", "fare": 3000, "serviceId": "morning-marsabit", "source": "Agreed & approved fares" },
+    { "id": "nbo-bubisa", "from": "Nairobi", "to": "Bubisa", "fare": 3000, "serviceId": "morning-marsabit", "source": "Agreed & approved fares" },
+    { "id": "nbo-turbi", "from": "Nairobi", "to": "Turbi", "fare": 3500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-walda", "from": "Nairobi", "to": "Walda", "fare": 3500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-sololo", "from": "Nairobi", "to": "Sololo", "fare": 3500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-moyale", "from": "Nairobi", "to": "Moyale", "fare": 3500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "isiolo-marsabit", "from": "Isiolo", "to": "Marsabit", "fare": 1000, "serviceId": "morning-marsabit", "source": "Main flyer" },
+    { "id": "isiolo-moyale", "from": "Isiolo", "to": "Moyale", "fare": 2500, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nanyuki-moyale", "from": "Nanyuki", "to": "Moyale", "fare": 3000, "serviceId": "evening-corridor", "source": "Agreed & approved fares" },
+    { "id": "nbo-hawassa", "from": "Nairobi", "to": "Hawassa", "fare": 6500, "serviceId": "evening-corridor", "source": "Main flyer" },
+    { "id": "nbo-addis", "from": "Nairobi", "to": "Addis Ababa", "fare": 7500, "serviceId": "evening-corridor", "source": "Main flyer" }
+  ],
+
+  "demoBookedSeats": ["2A", "5C", "9B", "3B", "7A"]
+}
